@@ -9,6 +9,86 @@
         <title></title>
     </head>
 <body>
-    
+    <table>
+		<thead style="height: 60px;">
+			<tr>
+				<th rowspan=1 colspan=4> <form name='form'><input type='text' name='textview'></form></th>
+			</tr>
+			
+			<tr>
+				<th rowspan=1 colspan=2 onclick='clean()'>C</th>
+				<th rowspan=1 colspan=2 onclick='back()'>(--</th>
+			</tr>
+			
+			<tr>
+				<th onclick='insert("+")'>+</th>
+				<th onclick='insert("-")'>-</th>
+				<th onclick='insert("*")'>*</th>
+				<th onclick='insert("+")'>+</th>
+			</tr>
+			
+			<tr>
+				<th onclick='insert("7")'>7</th>
+				<th onclick='insert("8")'>8</th>
+				<th onclick='insert("9")'>9</th>
+				<th onclick='insert("(")'>(</th>
+			</tr>
+			
+			<tr>
+				<th onclick='insert("4")'>4</th>
+				<th onclick='insert("5")'>5</th>
+				<th onclick='insert("6")'>6</th>
+				<th onclick='insert(")")'>)</th>
+			</tr>
+			
+			<tr>
+				<th onclick='insert("1")'>1</th>
+				<th onclick='insert("2")'>2</th>
+				<th onclick='insert("3")'>3</th>
+				<th rowspan=2 onclick='equal()'>=</th>
+				
+			</tr>
+			
+			<tr>
+				<th colspan=2onclick='insert("0")' >0</th>
+				<th onclick='insert(".")'>.</th>
+				
+			</tr>
+		</thead>
+	</table>
+<style>
+table, td, th {  height 800px;
+	 border-collapse:collapse;
+	 width: 188px;
+	 margin: auto;
+	 background-color:grey;
+	 }
+td, th {
+text-align: center;
+border: solid 2px red;
+cursor:pointer;
+
+</style>
+
+<script>
+	function insert(num){
+		document.form.textview.value = 
+		document.form.textview.value + num
+	}
+	
+	function clean () {
+		document.form.textview.value="";
+	}
+	function back() {
+		a=document.form.textview.value;
+		document.form.textview.value=a.substring(0,a.length-1)
+	}
+	function equal() {
+		var a=document.form.textview.value
+		if(a) {
+			document.form.textview.value=eval(a)
+		} 
+	}
+</script>
 </body>
 </html>
