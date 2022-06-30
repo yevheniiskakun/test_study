@@ -7,8 +7,17 @@
 <html>
     <head>
         <title>test15</title>
+	<style>
+	
+	</style>
     </head>
 <body>
-    <p>Change me!</p>
+    <p id="text">Change me!</p>
+    <button type="Submit" onclick="Up()">Up</button>
 </body>
 </html>
+<script>
+    function Up() {
+        document.getElementById("text").style.fontSize = "56px";
+    }
+</script>
