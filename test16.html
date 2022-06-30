@@ -7,8 +7,27 @@
 <html>
     <head>
         <title>Information</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     </head>
 <body>
-    <img src='screenshot1.png'>
+    <div class="container">
+        <br>
+        <label for="gmail"></label>
+        <input type="gmail" id="gmail"><br><br>
+        <button type="sumbmit" class="btn-primary" onclick="ValidateEmail()" >Sumbit</button>
+    </div>
 </body>
 </html>
+<script>
+
+   function ValidateEmail(){
+        let gmail=document.getElementById('gmail')
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(gmail.value))
+        {
+            return (true)
+        }
+            alert("You have entered an invalid email address!")
+            return (false)
+   }
+</script>
