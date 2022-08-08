@@ -8,7 +8,98 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     
+    <style>
+        .navig{
+            position: absolute;
+            
+        }
+        .nav_fixed {
+            top:0;
+            
+            position: fixed;
+            width: 100%;
+            
+        }
+        .header1{
+            width: 100%;
+        }
+        .header2{
+            width: 100%;
+        }
+        .dis{
+            display: none;
+        }
     
+        nav {
+        margin: 0 auto;
+        max-width: 800px;
+        box-shadow:0 3px 15px rgba(0,0,0,.15);
+    }
+    
+    nav::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+    
+    nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    nav ul li {
+        float: left;
+        position: relative;
+    }
+    
+    nav ul li a {
+        display: block;
+        color: rgba(255, 255, 255, .9);
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        transition: all .3s ease-in-out;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a:focus {
+        background: rgba(0, 0, 0, .15);
+    }
+    
+    nav ul li a:focus {
+        color: rgb(51, 51, 51);
+    }
+    
+    nav ul li a:not(:only-child)::after {
+        padding-left: 4px;
+        
+    }
+    
+    nav ul li ul li {
+        min-width: 50px;
+    }
+    
+    nav ul li ul li a {
+        background: transparent;
+        color: #555;
+        border-bottom: 1px solid #535353;
+    }
+    
+    nav ul li ul li a:hover,
+    nav ul li ul li a:focus {
+        background: rgb(78, 78, 78);
+        color: #111;
+    }
+    
+    .dropdown {
+        display: none;
+        position: absolute;
+        background: rgb(48, 43, 43);
+        box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+    }
+    </style>
 
     
 </head >
@@ -177,98 +268,7 @@
     </footer>
 </body>
 </html>
-<style>
-    .navig{
-        position: absolute;
-        
-    }
-    .nav_fixed {
-        top:0;
-        
-        position: fixed;
-        width: 100%;
-        
-    }
-    .header1{
-        width: 100%;
-    }
-    .header2{
-        width: 100%;
-    }
-    .dis{
-        display: none;
-    }
 
-    nav {
-	margin: 0 auto;
-	max-width: 800px;
-	box-shadow:0 3px 15px rgba(0,0,0,.15);
-}
-
-nav::after {
-	display: block;
-	content: '';
-	clear: both;
-}
-
-nav ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-nav ul li {
-	float: left;
-	position: relative;
-}
-
-nav ul li a {
-	display: block;
-	color: rgba(255, 255, 255, .9);
-	text-decoration: none;
-	padding: 1rem 2rem;
-	border-top: 2px solid transparent;
-	border-bottom: 2px solid transparent;
-	transition: all .3s ease-in-out;
-}
-
-nav ul li a:hover,
-nav ul li a:focus {
-	background: rgba(0, 0, 0, .15);
-}
-
-nav ul li a:focus {
-	color: rgb(51, 51, 51);
-}
-
-nav ul li a:not(:only-child)::after {
-	padding-left: 4px;
-	
-}
-
-nav ul li ul li {
-	min-width: 50px;
-}
-
-nav ul li ul li a {
-	background: transparent;
-	color: #555;
-	border-bottom: 1px solid #535353;
-}
-
-nav ul li ul li a:hover,
-nav ul li ul li a:focus {
-	background: rgb(78, 78, 78);
-	color: #111;
-}
-
-.dropdown {
-	display: none;
-	position: absolute;
-	background: rgb(48, 43, 43);
-	box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
-}
-</style>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
